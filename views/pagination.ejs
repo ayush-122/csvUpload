@@ -1,0 +1,22 @@
+<!-- Inside your pagination section -->
+<link rel="stylesheet" type="text/css" href="../css/pagination.css">
+<ul class="pagination">
+    <% if (page > 1) { %>
+      <li class="pagination-item">
+        <a href="?page=<%= page - 1 %>" class="pagination-arrow">Previous</a>
+      </li>
+    <% } %>
+  
+    <% for (let i = iterator; i <= endingLink; i++) { %>
+      <li class="pagination-item">
+        <a href="?page=<%= i %>" class="pagination-link<%= i == page ? ' active' : '' %>"><%= i %></a>
+      </li>
+    <% } %>
+  
+    <% if (page < numberOfPages) { %>
+      <li class="pagination-item">
+        <a href="?page=<%=Number(page) + 1 %>" class="pagination-arrow">Next</a>
+      </li>
+    <% } %>
+  </ul>
+  

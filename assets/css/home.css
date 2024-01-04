@@ -1,0 +1,118 @@
+
+
+.center-text h1 {
+    margin-top: 50px;
+    font-size: 36px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    height: 20px;
+}
+
+.center-text p {
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color:black;
+}
+
+.input-box
+{
+    background-color: whitesmoke;
+    width: fit-content;
+    margin:30px auto;
+    padding: 20px;
+    border: 1px solid brown;
+    border-radius: 10px;
+}
+.input-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 70%;
+    height: 150px;
+ 
+}
+
+.input-container input
+{
+   font-size: 18px;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: green;
+}
+
+.upload-btn {
+    width: 130px;
+    height: 40px;
+    border: none;
+    background-color: green;
+    color: whitesmoke;
+    font-size: 18px;
+    border-radius: 15px;
+}
+
+.list-center-text {
+    color:whitesmoke;
+    font-family: 'Franklin Gothic', sans-serif;
+    text-align: center;
+    background-color: brown;
+    margin-top: 50px;
+}
+
+.list-center-text h2 {
+    padding: 5px;
+    font-size: 30px;
+}
+
+.no-file {
+    font-size: 30px;
+    color: red;
+    font-family: 'Franklin Gothic', sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+.file-details {
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+}
+
+th {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+.view-link {
+    padding: 10px;
+    text-decoration: none;
+    color: green;
+}
+
+.delete-link {
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Styles on hover */
+.upload-btn:hover {
+    transform: translateY(-1.5px);
+    box-shadow: 0px 2px 2px 1px rgba(75, 136, 253, 0.4);
+    cursor: pointer;
+}

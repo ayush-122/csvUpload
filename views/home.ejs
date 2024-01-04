@@ -1,0 +1,69 @@
+<!-- Local CSS for body -->
+<link rel="stylesheet" type="text/css" href="../css/home.css">
+<!-- Local CSS for header -->
+<link rel="stylesheet" type="text/css" href="../css/header.css">
+
+<!-- Header Section -->
+<div class="nav-bar">
+    <a href="" class="back-icon" style="visibility: hidden;">
+        <i class="fa-solid fa-circle-arrow-left" style="color: #b8b8b8;"></i>
+    </a>   
+    <div class="title">
+        CSV Upload
+    </div>
+</div>
+
+<!-- Upload Section -->
+<div class="container">
+    <!-- Main Text -->
+    <div class="input-box">
+    <div class="center-text">
+        <h1>File Upload</h1>
+        <p>Parses a CSV file and displays its contents in a tabular format</p>
+    </div>
+
+    <!-- Upload Box -->
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="input-container">
+            <input type="file" id="csvFile" name="csvfile" accept=".csv">
+            <button id="upload" class="upload-btn">Upload</button>
+        </div>
+    </form>
+</div>
+</div>
+
+<!-- Display Uploaded Files -->
+<div class="files-list" style="margin-bottom: 50px;">  
+    <div class="list-center-text">
+        <h2>Uploaded Files</h2>
+    </div>
+
+    <% if(files.length === 0) { %>
+        <div class="no-file">No file is present</div>
+    <% } else { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>View</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(let file of files) { %>
+                    <tr>
+                        <td><%= file.fileName %></td>
+                        <td><%= file.createdAt.toLocaleDateString() %></td>
+                        <td><%= file.createdAt.toLocaleTimeString() %></td>
+                        <td><a href="/view/<%= file.file %>" class="view-link"><i class="fas fa-table"></i></a></td>
+                        <td><a href="/delete/<%= file.file %>" class="delete-link"><i class="fas fa-trash-alt"style="color: #f00;"></i></a></td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    <% } %>
+</div>
+
+
